@@ -1,0 +1,24 @@
+{
+  "name": "苗栗縣房屋標準單價查詢系統",
+  "short_name": "苗栗房屋單價",
+  "description": "苗栗縣房屋標準單價查詢與折舊率試算系統",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#f5f7fa",
+  "theme_color": "#7de60e",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "icon.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "icon.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}

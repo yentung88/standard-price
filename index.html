@@ -5,6 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>苗栗縣房屋標準單價查詢系統</title>
+    <link rel="manifest" href="manifest.json" />
+    <meta name="theme-color" content="#7de60e" />
+    <link rel="apple-touch-icon" href="icon.png" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
     <style>
       :root {
         --primary-color: #7de60e;
@@ -1312,6 +1317,16 @@
       window.addEventListener("DOMContentLoaded", () => {
         console.log("System Initialized Offline");
       });
+
+      // 註冊 Service Worker
+      if ("serviceWorker" in navigator) {
+        window.addEventListener("load", () => {
+          navigator.serviceWorker
+            .register("./sw.js")
+            .then((reg) => console.log("Service Worker 註冊成功", reg))
+            .catch((err) => console.log("Service Worker 註冊失敗", err));
+        });
+      }
     </script>
   </body>
 </html>
